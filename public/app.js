@@ -6,10 +6,12 @@ const addImagestoGallery = (res) => {
     <section class="photo">
     <header class="photo__header">
       <div class="photo__header-color">
+      <a href="profile.html?username=${element.user.username}">
         <img class="photo__avatar" src="${element.user.profile_image.medium}"/>
+      </a>
       </div>
       <div class="photo__header-column">
-        <span class="photo__username">${element.user.username}</span>
+        <span class="photo__username"><a href="profile.html?username=${element.user.username}">${element.user.username}</a></span>
       </div>
     </header>
     <div class="photo__file-container">
@@ -23,7 +25,7 @@ const addImagestoGallery = (res) => {
       <span class="photo__likes">${element.likes}likes</span>
       <div class="photo__comments">
         <div class="photo__comment">
-          <span class="photo__comment-author">${element.user.username}</span>${element.alt_description}
+          <span class="photo__comment-author"><a href="profile.html?username=${element.user.username}">${element.user.username}</span></a>${element.alt_description}
         </div>
       </div>
     </div> 

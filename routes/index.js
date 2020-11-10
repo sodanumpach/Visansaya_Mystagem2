@@ -41,4 +41,19 @@ router.post('/api/searchUser', (req,res)=>{
 
 });
 
+router.post('/api/showImage', (req, res) => {
+    let { username } = req.body;
+    unsplash.users.photos(username, 1, 10, "latest")
+        .then(toJson)
+        .then(json => {
+            res.status(200).send(json)
+        })
+        .catch((err) => {
+            console.log("Error Message -->", err);
+            res.status(200).send({
+                "messageError": err
+            })
+        });
+});
+
 module.exports = router;

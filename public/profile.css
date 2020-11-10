@@ -23,7 +23,7 @@ Flexbox and floats are used as a fallback so that browsers which don't support g
 body {
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
-    background-color: #fafafa;
+    background-color:#193549;
     color: #262626;
     padding-bottom: 3rem;
 }
@@ -64,6 +64,9 @@ img {
 
 .profile {
     padding: 5rem 0;
+    background-color:whitesmoke;
+    text-align: center;
+
 }
 
 .profile::after {
